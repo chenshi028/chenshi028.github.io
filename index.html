@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Shi Chen</title>
+  <title>Chen Shi / 陈实</title>
   <style>
     :root {
       color-scheme: light;
@@ -55,10 +55,15 @@
       font-weight: 700;
     }
 
-    .subtitle {
-      margin: 0 0 28px;
-      color: var(--muted);
-      font-size: 1.1rem;
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 14px;
+    }
+
+    .links a {
+      font-weight: 600;
     }
 
     section {
@@ -75,6 +80,45 @@
 
     p {
       margin: 0;
+    }
+
+    .bio {
+      margin-top: 20px;
+    }
+
+    ul {
+      margin: 0;
+      padding-left: 1.2rem;
+    }
+
+    li + li {
+      margin-top: 10px;
+    }
+
+    .interests {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      padding: 0;
+      list-style: none;
+    }
+
+    .interests li {
+      margin: 0;
+      padding: 6px 10px;
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      background: var(--surface);
+      color: var(--ink);
+      font-size: 0.95rem;
+    }
+
+    .paper-title {
+      font-weight: 700;
+    }
+
+    .paper-meta {
+      color: var(--muted);
     }
 
     a {
@@ -103,20 +147,55 @@
 <body>
   <main>
     <div class="profile">
-      <img class="profile-photo" src="assets/photo.jpg" alt="Portrait of Shi Chen">
+      <aside>
+        <img class="profile-photo" src="assets/photo.jpg" alt="Portrait of Chen Shi">
+
+        <div class="links" aria-label="Profile links">
+          <a href="mailto:s-chen24@mails.tsinghua.edu.cn">Email</a>
+          <a href="https://github.com/chenshi028">GitHub</a>
+        </div>
+      </aside>
 
       <div>
-        <h1>Shi Chen</h1>
-        <p class="subtitle">I am currently studying artificial intelligence at IIIS, Tsinghua University.</p>
+        <h1>Chen Shi / 陈实</h1>
+        <p class="bio">
+          I am an undergraduate student at the
+          <a href="https://iiis.tsinghua.edu.cn/en/">Institute for Interdisciplinary Information Sciences</a>,
+          Tsinghua University. I am currently mentored by Prof.
+          <a href="https://ericyi.github.io/">Li Yi</a> at the
+          <a href="https://iiis.tsinghua.edu.cn/en/Research/Research_Groups/Laboratory_of_3D_Vision_Computing_and_Machine_Inte.htm">THU 3DVICI Lab</a>,
+          where I work on robotics and embodied intelligence, with a particular focus on whole-body
+          control. I am also a research intern at <a href="https://www.galbot.com/">Galbot</a>.
+        </p>
 
         <section>
           <h2>Research Interests</h2>
-          <p>My research interests include AI safety, reinforcement learning, and robotics.</p>
+          <ul class="interests">
+            <li>Robotics</li>
+            <li>Whole-body control</li>
+            <li>Humanoid-object interaction</li>
+          </ul>
         </section>
 
         <section>
-          <h2>Email</h2>
+          <h2>Publications &amp; Preprints</h2>
+          <ul>
+            <li>
+              <span class="paper-title">
+                <a href="https://arxiv.org/abs/2606.07970">Defending Against Malicious Finetuning by Scaling Train-time Adversarial Attacks</a>
+              </span><br>
+              <span class="paper-meta">
+                Haoming Wen, Shi Chen, Qingyu Shi, Siyuan Liu, Minrui Luo, Jingzhao Zhang, Tianxing He.
+                arXiv preprint, arXiv:2606.07970, 2026. Under review.
+              </span>
+            </li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Contact</h2>
           <p><a href="mailto:s-chen24@mails.tsinghua.edu.cn">s-chen24@mails.tsinghua.edu.cn</a></p>
+          <p><a href="https://github.com/chenshi028">https://github.com/chenshi028</a></p>
         </section>
       </div>
     </div>
